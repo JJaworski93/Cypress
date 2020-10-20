@@ -1,0 +1,31 @@
+/// <reference types="Cypress" />
+
+
+
+describe('Minimum stake testing', () => { 
+
+
+    it.only('second test', () => {
+
+        cy.visit('https://sports.bwin.com/en/sports'); 
+        cy.log(window.clientConfig.msSportsUser.configSettings.minimumStake);
+        cy.window().then((win) => { 
+            cy.stub(win.clientConfig.msSportsUser.configSettings.minimumStake, 'assign').as('minimumStake');
+            cy.log('@minimumStake');
+        })
+        cy.window().then((win) => {
+            cy.wrap(cy.stub(win.clientConfig.msSportsUser.configSettings.minimumStake, 'assign')).as('minStake');
+            
+        })
+
+    
+    
+    });
+
+
+
+
+
+
+
+});
