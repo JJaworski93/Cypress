@@ -7,7 +7,7 @@ describe('Minimum stake testing', () => {
 
     it.only('second test', () => {
 
-        cy.visit('https://sports.bwin.com/en/sports'); 
+        cy.visit('https://........'); 
         cy.log(window.clientConfig.msSportsUser.configSettings.minimumStake);
         cy.window().then((win) => { 
             cy.stub(win.clientConfig.msSportsUser.configSettings.minimumStake, 'assign').as('minimumStake');
